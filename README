@@ -1,0 +1,26 @@
+base64uid
+=========
+
+###### Generates URL safe uids.
+
+```go
+package main
+
+import (
+	"fmt"
+	"log"
+
+	"github.com/chlorm/base64uid"
+)
+
+func main() {
+  // Length of the UID is deterministic based on the number of bytes
+  // specified.
+	uid, err := base64uid.New(16)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(uid)
+}
+```
+
